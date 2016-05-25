@@ -8,3 +8,11 @@
     state: restarted
   tags:
     - openvpn
+
+- name: stop openvpn
+  become: yes
+  service:
+    name: "{{ openvpn_service_name }}"
+    state: stopped
+  tags:
+    - openvpn
